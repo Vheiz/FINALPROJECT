@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cap-Soul</title>
+    <style>
+    @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
+    :root {
+      --primary-color: #f1faff;
+      --text-dark: #030712;
+      --text-light: #6b7280;
+      --extra-light: #fbfbfb;
+      --white: #ffffff;
+      --max-width: 1200px;
+    }
+
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    .section__container {
+      max-width: var(--max-width);
+      margin: auto;
+      padding: 5rem 1rem;
+    }
+
+    .section__title {
+      padding-bottom: 0.5rem;
+      margin-bottom: 4rem;
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      position: relative;
+    }
+
+    .section__title::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      height: 3px;
+      width: 75px;
+      background-color: var(--text-dark);
+    }
+
+    .btn {
+      padding: 0.75rem 2rem;
+      font-size: 0.8rem;
+      outline: none;
+      border: none;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    img {
+      width: 100%;
+      display: block;
+    }
+
+    body {
+      font-family: "Montserrat", sans-serif;
+    }
+
+    .nav__container {
+      padding: 2rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav__logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--text-dark);
+    }
+
+    .nav__links {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .link a {
+      padding: 0 0.5rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-light);
+      transition: 0.3s;
+    }
+
+    .link a:hover {
+      color: var(--text-dark);
+    }
+
+    .nav__icons {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .nav__icons span {
+      font-size: 1.25rem;
+      cursor: pointer;
+    }
+
+    .container {
+      padding: 2rem 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-left: 2rem;
+    }
+
+    .slider-wrapper {
+      max-width: 48rem;
+    }
+
+    .slider {
+      display: flex;
+      flex-direction: column;
+      aspect-ratio: 1/1;
+      overflow: auto;
+      scroll-snap-type: y mandatory;
+      scroll-behavior: smooth;
+      box-shadow: 0 1.5rem 3 rem -0.75rem hsla(0, 0%, 0.25);
+      border-radius: 0.5rem;
+    }
+
+    .slider img {
+      flex: 1 0 100%;
+      scroll-snap-align: start;
+      object-fit: cover;
+    }
+
+.container {
+margin-top: -100px;
+padding-left: 50px;
+}
+
+.section__title {
+margin-bottom: 5px;
+}
+
+    .contact-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+
+    .contact-info {
+      border: 2px solid #000;
+      border-radius: 10px;
+      padding: 20px;
+      max-width: 400px;
+      text-align: center;
+    }
+
+    .container1 {
+      border-radius: 5px;
+      padding: 20px;
+border: 2px solid #000;
+      width: 700px;
+      margin: 100px 10px 25px 25px;
+    }
+
+    .form-header {
+      font-size: 30px;
+      font-family: "Bahnschrift Light", Bahnschrift;
+      color: #454444;
+    }
+
+    .container label {
+      font-size: 20px;
+      font-family: "Bahnschrift Light", Bahnschrift;
+    }
+
+    .container input[type=text], 
+    .container select {
+      width: calc(100% - 32px);
+      padding: 14px 16px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      font-family: "Bahnschrift Light", Bahnschrift;
+    }
+
+    .container textarea {
+      width: calc(100% - 32px);
+      height: 30x;
+      padding: 12px 20px;
+      box-sizing: border-box;
+      border: 2px solid #ccc;
+      border-radius: 4px;
+	  border:
+      font-size: 16px;
+      resize: none;
+      font-family: "Bahnschrift Light", Bahnschrift;
+    }
+
+    .container input[type=submit] {
+      width: calc(100% - 32px);
+      background-color: black;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-family: "Bahnschrift Light", Bahnschrift;
+    }
+
+    .container input[type=submit]:hover {
+      background-color: #232323;
+    }
+    </style>
+</head>
+<body>
+    <nav class="section__container nav__container">
+      <a href="home.html" class="nav__logo">Cap-Soul</a>
+      <ul class="nav__links">
+        <li class="link"><a href="home.html">HOME</a></li>
+        <li class="link"><a href="shop.html">SHOP</a></li>
+        <li class="link"><a href="about.html">ABOUT</a></li>
+        <li class="link"><a href="contact.html">CONTACT</a></li>
+      </ul>
+      <div class="nav__icons">
+        <span><i class="ri-shield-user-line"></i></span>
+        <span><i class="ri-search-line"></i></span>
+        <span><i class="ri-shopping-bag-2-line"></i></span>
+      </div>
+    </nav>
+
+    <section class="container">
+        <div class="slider-wrapper">
+            <div class="slider">
+			 <h2 class="section__title">Contact Us</h2>
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <p>Address: Pasig City, Metro Manila, Philippines</p>
+                        <p>Phone: 09672212529</p>
+                        <p>Email: mishijavier44@gmail.com</p>
+						<p>Facebook: Cap-Soul</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container1">
+            <div class="form-header">Send us a message here</div>
+            <form action="/action_page.php">
+                <label for="fname">First Name:</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
+                
+                <label for="lname">Last Name:</label>
+                <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
+                
+                <label for="country">Country:</label>
+                <select id="country" name="country">
+                    <option value="australia">Australia</option>
+                    <option value="canada">Canada</option>
+                    <option value="usa">USA</option>
+                </select>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" placeholder="Write something.." required></textarea>
+                
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </section>
+</body>
+</html>

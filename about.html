@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cap-Soul</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
+        :root {
+          --primary-color: #f1faff;
+          --text-dark: #030712;
+          --text-light: #6b7280;
+          --extra-light: #fbfbfb;
+          --white: #ffffff;
+          --max-width: 1200px;
+        }
+
+        * {
+          padding: 0;
+          margin: 0;
+          box-sizing: border-box;
+        }
+
+        .section__container {
+          max-width: var(--max-width);
+          margin: auto;
+          padding: 5rem 1rem;
+        }
+
+        .section__title {
+          padding-bottom: 0.5rem;
+          margin-bottom: 4rem;
+          text-align: center;
+          font-size: 2rem;
+          font-weight: 600;
+          color: var(--text-dark);
+          position: relative;
+        }
+
+        .section__title::after {
+          content: "";
+          position: absolute;
+          left: 50%;
+          bottom: 0;
+          transform: translateX(-50%);
+          height: 3px;
+          width: 75px;
+          background-color: var(--text-dark);
+        }
+
+        .btn {
+          padding: 0.75rem 2rem;
+          font-size: 0.8rem;
+          outline: none;
+          border: none;
+          cursor: pointer;
+          transition: 0.3s;
+        }
+
+        a {
+          text-decoration: none;
+        }
+
+        img {
+          width: 100%;
+          display: block;
+        }
+
+        body {
+          font-family: "Montserrat", sans-serif;
+        }
+
+        .nav__container {
+          padding: 2rem 1rem;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+
+        .nav__logo {
+          font-size: 1.5rem;
+          font-weight: 700;
+          color: var(--text-dark);
+        }
+
+        .nav__links {
+          list-style: none;
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+        }
+
+        .link a {
+          padding: 0 0.5rem;
+          font-size: 0.9rem;
+          font-weight: 600;
+          color: var(--text-light);
+          transition: 0.3s;
+        }
+
+        .link a:hover {
+          color: var(--text-dark);
+        }
+
+        .nav__icons {
+          display: flex;
+          gap: 1rem;
+        }
+
+        .nav__icons span {
+          font-size: 1.25rem;
+          cursor: pointer;
+        }
+
+        .container {
+          padding: 2rem 0;
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start; /* Align items to the start of the container */
+          max-width: 1200px; /* You can adjust this width as needed */
+          margin: auto; /* Center the container */
+        }
+
+        .slider-wrapper {
+          width: 48%;
+          max-width: 48rem; /* Keep the same max-width */
+        }
+
+        .slider {
+          display: flex;
+          flex-direction: column;
+          aspect-ratio: 1/1;
+          overflow: auto;
+          scroll-snap-type: y mandatory;
+          scroll-behavior: smooth;
+          box-shadow: 0 1.5rem 3 rem -0.75rem hsla(0, 0%, 0.25);
+          border-radius: 0.5rem;
+        }
+
+        .slider img {
+          flex: 1 0 100%;
+          scroll-snap-align: start;
+          object-fit: cover;
+        }
+
+
+        .Everyday {
+          font-size: 18px;
+          color: black;
+          width: 48%; /* Set width to 48% to make them side by side */
+          padding: 1rem; /* Add padding to the Everyday section */
+          box-sizing: border-box; /* Include padding in width calculation */
+        }
+
+        .Everyday h2 {
+          color: #black;
+          text-align: center;
+          margin-bottom: 1rem;
+          margin-top: 0rem;
+          outline: double;
+        }
+
+    </style>
+</head>
+<body>
+    <nav class="section__container nav__container">
+      <a href="home.html" class="nav__logo">Cap-Soul</a>
+      <ul class="nav__links">
+        <li class="link"><a href="home.html">HOME</a></li>
+        <li class="link"><a href="shop.html">SHOP</a></li>
+        <li class="link"><a href="about.html">ABOUT</a></li>
+        <li class="link"><a href="contact.html">CONTACT</a></li>
+      </ul>
+      <div class="nav__icons">
+        <span><i class="ri-shield-user-line"></i></span>
+        <span><i class="ri-search-line"></i></span>
+        <span><i class="ri-shopping-bag-2-line"></i></span>
+      </div>
+    </nav>
+
+    <section class="container">
+        <div class="slider-wrapper">
+            <div class="slider">
+                <img id="slide-1" src="https://neweracap.ph/__resources/userfiles/03---SALES-BLOG---SOCMED-1.jpg" alt="aesthetics1" />
+                <img id="slide-2" src="https://fastly.4sqi.net/img/general/600x600/181369_G6wDpHUjwizSC2Th_cNjFRkX1hN1YPcvULd1_kfZowk.jpg" alt="aesthetics2" />
+                <img id="slide-3" src="https://i.pinimg.com/474x/5d/3a/b2/5d3ab2872120aeb83784f68516ea0212.jpg" alt="aesthetics3" />          
+            </div>
+            <div class="slider-nav">
+                <a href="#slide-1"></a>
+                <a href="#slide-2"></a>
+                <a href="#slide-3"></a>
+            </div>      
+        </div>
+
+        <div class="Everyday">
+            <h2>About Our Website</h2>
+            <p>
+                Welcome to your cap haven! At Cap-Soul, we celebrate the timeless appeal and versatility of caps. Whether you're a dedicated collector, a fashion aficionado looking to elevate your ensemble, or simply someone who appreciates the practicality of a good cap, you'll find something to love here. Our curated collection showcases a diverse range of styles, from classic baseball caps to trendy snapbacks and everything in between. With quality craftsmanship and attention to detail, each cap is not just an accessory but a statement piece that reflects your individuality and style.
+            </p> <br>
+            <p>
+                Beyond just offering a wide array of caps, we strive to foster a community united by a shared passion for headwear. Through our blog, social media channels, and interactive forums, we provide a platform for cap enthusiasts to connect, share styling tips, and discover the latest trends. Whether you're seeking inspiration for your next cap purchase or eager to engage with like-minded individuals, Cap-Soul is your destination for all things caps. Join us in celebrating the enduring appeal of this iconic accessory and let your cap collection tell your unique story.
+            </p>
+        </div>
+    </section>
+</body>
+</html>

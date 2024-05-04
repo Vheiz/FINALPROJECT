@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cap-Soul</title>
+    <style>
+	
+	@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
+:root {
+  --primary-color: #f1faff;
+  --text-dark: #030712;
+  --text-light: #6b7280;
+  --extra-light: #fbfbfb;
+  --white: #ffffff;
+  --max-width: 1200px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.section__container {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 5rem 1rem;
+}
+
+.section__title {
+  padding-bottom: 0.5rem;
+  margin-bottom: 4rem;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  position: relative;
+}
+
+.section__title::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  height: 3px;
+  width: 75px;
+  background-color: var(--text-dark);
+}
+
+.btn {
+  padding: 0.75rem 2rem;
+  font-size: 0.8rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.nav__container {
+  padding: 2rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav__logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.nav__links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.link a {
+  padding: 0 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-light);
+  transition: 0.3s;
+}
+
+.link a:hover {
+  color: var(--text-dark);
+}
+
+.nav__icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav__icons span {
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+	
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff; /* White background */
+}
+        
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .product {
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            padding: 20px;
+            width: 200px;
+            text-align: center;
+        }
+        
+        .product img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .product h2 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        
+        .product p {
+            font-size: 0.9em;
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        .btn {
+            background-color: #333;
+            color: #fff;
+            padding: 8px 16px;
+            border: none;
+            cursor: pointer;
+            font-size: 0.9em;
+            text-transform: uppercase;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: #555;
+        }
+        
+        .cart {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        
+        .modal-content {
+            background-color: #fefefe;
+            margin: 20% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 600px;
+        }
+        
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <nav class="section__container nav__container">
+      <a href="home.html" class="nav__logo">Cap-Soul</a>
+      <ul class="nav__links">
+        <li class="link"><a href="home.html">HOME</a></li>
+        <li class="link"><a href="shop.html">SHOP</a></li>
+        <li class="link"><a href="about.html">ABOUT</a></li>
+        <li class="link"><a href="contact.html">CONTACT</a></li>
+      </ul>
+      <div class="nav__icons">
+        <span><i class="ri-shield-user-line"></i></span>
+        <span><i class="ri-search-line"></i></span>
+        <span><i class="ri-shopping-bag-2-line"></i></span>
+      </div>
+    </nav>
+    
+    <div class="container">
+        <div class="product">
+            <img src="https://neweracap.ph/__resources/webdata/images/products/16565.jpg.ashx?zoom=.3" alt="Product Image">
+            <h2>New York Yankees Cap</h2>
+            <p>₱2495.00</p>
+            <input type="number" value="1" min="1" class="quantity">
+            <button class="btn add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://neweracap.ph/__resources/webdata/images/products/16564.jpg.ashx?zoom=.3" alt="Product Image">
+            <h2>San Francisco Giants Cap</h2>
+            <p>₱2000.00</p>
+            <input type="number" value="1" min="1" class="quantity">
+            <button class="btn add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://neweracap.ph/__resources/webdata/images/products/16563.jpg.ashx?zoom=.3" alt="Product Image">
+            <h2>Miami Marlins Cap</h2>
+            <p>₱2100.00</p>
+            <input type="number" value="1" min="1" class="quantity">
+            <button class="btn add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://neweracap.ph/__resources/webdata/images/products/16562.jpg.ashx?zoom=.3" alt="Product Image">
+            <h2>Product 3</h2>
+            <p>₱2500.00</p>
+            <input type="number" value="1" min="1" class="quantity">
+            <button class="btn add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://neweracap.ph/__resources/webdata/images/products/16560.jpg.ashx?zoom=.3" alt="Product Image">
+            <h2>Product 4</h2>
+            <p>₱2000.00</p>
+            <input type="number" value="1" min="1" class="quantity">
+            <button class="btn add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://neweracap.ph/__resources/webdata/images/products/16559.jpg.ashx?zoom=.3" alt="Product Image">
+            <h2>Product 5</h2>
+            <p>₱2650.00</p>
+            <input type="number" value="1" min="1" class="quantity">
+            <button class="btn add-to-cart">Add to Cart</button>
+        </div>		
+        <div class="product">
+            <img src="https://neweracap.ph/__resources/webdata/images/products/16558.jpg.ashx?zoom=.3" alt="Product Image">
+            <h2>Product 6</h2>
+            <p>₱2950.00</p>
+            <input type="number" value="1" min="1" class="quantity">
+            <button class="btn add-to-cart">Add to Cart</button>
+        </div>
+		<div class="product">
+            <img src="https://neweracap.ph/__resources/webdata/images/products/16557.jpg.ashx?zoom=.3" alt="Product Image">
+            <h2>Product 7</h2>
+            <p>₱2700.00</p>
+            <input type="number" value="1" min="1" class="quantity">
+            <button class="btn add-to-cart">Add to Cart</button>
+        </div>
+		<div class="product">
+            <img src="https://neweracap.ph/__resources/webdata/images/products/16556.jpg.ashx?zoom=.3" alt="Product Image">
+            <h2>Product 8</h2>
+            <p>>₱2250.00</p>
+            <input type="number" value="1" min="1" class="quantity">
+            <button class="btn add-to-cart">Add to Cart</button>
+        </div>
+		<div class="product">
+            <img src="https://neweracap.ph/__resources/webdata/images/products/16555.jpg.ashx?zoom=.3" alt="Product Image">
+            <h2>Product 9</h2>
+            <p>>₱2750.00</p>
+            <input type="number" value="1" min="1" class="quantity">
+            <button class="btn add-to-cart">Add to Cart</button>
+        </div>
+		<div class="product">
+            <img src="https://neweracap.ph/__resources/webdata/images/products/16554.jpg.ashx?zoom=.3" alt="Product Image">
+            <h2>Product 10</h2>
+            <p>₱2300.00</p>
+            <input type="number" value="1" min="1" class="quantity">
+            <button class="btn add-to-cart">Add to Cart</button>
+        </div>
+		<div class="product">
+            <img src="https://neweracap.ph/__resources/webdata/images/products/16553.jpg.ashx?zoom=.3" alt="Product Image">
+            <h2>Product 11</h2>
+            <p>₱2900.00</p>
+            <input type="number" value="1" min="1" class="quantity">
+            <button class="btn add-to-cart">Add to Cart</button>
+        </div>
+		<div class="product">
+            <img src="https://neweracap.ph/__resources/webdata/images/products/16529.jpg.ashx?zoom=.3" alt="Product Image">
+            <h2>Product 12</h2>
+            <p>₱2400.00</p>
+            <input type="number" value="1" min="1" class="quantity">
+            <button class="btn add-to-cart">Add to Cart</button>
+        </div>
+		<div class="product">
+            <img src="https://neweracap.ph/__resources/webdata/images/products/16528.jpg.ashx?zoom=.3" alt="Product Image">
+            <h2>Product 6</h2>
+            <p>₱2700.00</p>
+            <input type="number" value="1" min="1" class="quantity">
+            <button class="btn add-to-cart">Add to Cart</button>
+        </div>
+		<div class="product">
+            <img src="https://neweracap.ph/__resources/webdata/images/products/16527.jpg.ashx?zoom=.3" alt="Product Image">
+            <h2>Product 6</h2>
+            <p>₱2450.00</p>
+            <input type="number" value="1" min="1" class="quantity">
+            <button class="btn add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="cart">View Cart (0)</div>
+
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Shopping Cart</h2>
+            <ul id="cartItems"></ul>
+            <p>Total: <span id="cartTotal">$0</span></p>
+            <button class="btn checkout">Checkout</button>
+        </div>
+    </div>
+
+<script>
+    const cartButton = document.querySelector('.cart');
+    const addToCartButtons = document.querySelectorAll('.add-to-cart');
+    const cartModal = document.getElementById('cartModal');
+    const closeBtn = document.querySelector('.close');
+    const cartItemsList = document.getElementById('cartItems');
+    const cartTotalSpan = document.getElementById('cartTotal');
+    const checkoutBtn = document.querySelector('.checkout');
+    let cart = []; 
+
+    addToCartButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const productName = button.parentElement.querySelector('h2').textContent;
+            const price = parseFloat(button.parentElement.querySelector('p').textContent.slice(1)); // Get the price without the currency symbol
+            const quantity = parseInt(button.parentElement.querySelector('.quantity').value); // Get the quantity
+            const totalPrice = price * quantity;
+            const item = { name: productName, price: totalPrice, quantity: quantity };
+            cart.push(item); 
+            updateCartDisplay(); 
+        });
+    });
+
+    function updateCartDisplay() {
+        let totalPrice = 0;
+        cartItemsList.innerHTML = ''; // Clear previous items
+        cart.forEach(item => {
+            const listItem = document.createElement('li');
+            listItem.textContent = `${item.name} x ${item.quantity}`;
+            cartItemsList.appendChild(listItem);
+            totalPrice += item.price;
+        });
+        cartTotalSpan.textContent = `$${totalPrice.toFixed(2)}`;
+        cartButton.textContent = `View Cart (${cart.length})`; // Update cart button text
+    }
+
+    cartButton.addEventListener('click', () => {
+        cartModal.style.display = 'block';
+        updateCartDisplay();
+    });
+
+    closeBtn.addEventListener('click', () => {
+        cartModal.style.display = 'none';
+    });
+
+    window.addEventListener('click', (event) => {
+        if (event.target == cartModal) {
+            cartModal.style.display = 'none';
+        }
+    });
+
+    checkoutBtn.addEventListener('click', () => {
+        cartModal.style.display = 'none';
+    });
+</script>
+</body>
+</html>
